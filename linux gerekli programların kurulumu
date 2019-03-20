@@ -1,0 +1,66 @@
+﻿					GOOGLE CHROME
+which google-chrome-stable     -> google nin hangi dizinde olduğunu bul
+leafpad /usr/bin/google-chrome-stable   ->leafpad ile google chrome açıyorsun
+--user-data-dir --no-sandbox            -> dosyanın en sonuna kaydedip çıkıyorsun  @ işaretinin yanına
+
+
+
+					ANACONDA NAVIGATOR(python ide)
+
+anaconda navigatoru indir
+indirdiğin dizine git
+dosyanın başına 'bash' koy çalıştır
+açmak için terminalde anaconda-navigator yaz
+
+
+					XAMPP
+dosyayı indirdiğin dizine git
+chmod +x xampp-linux-x64-7.2.9-0-installer.run﻿
+./xampp-linux-x64-7.2.9-0-installer.run
+
+çalıştırması -> /opt/lampp/lampp start
+
+
+
+					FLASK MYSQLDB
+Linux mu kullanıyorsunuz? libmysqlclient-dev paketini kurup deneyiniz olmazsa
+
+setuptoolsu güncellemeyi deneyebilirsiniz
+
+pip install --upgrade setuptools
+
+o da olmadı bir de şu şekilde kurmayı deneyin:
+
+pip install --no-cache-dir flask-mysqldb
+
+libmariadb-dev
+libmariadb-dev-compat
+
+
+
+				Python
+apt-get install python3-pip
+pip install python3-pip
+pip3 install -U setuptools
+
+
+
+				Sqlitebrowser
+apt-get install sqlitebrowser
+
+
+
+				VisualStudio Code
+yükledikten sonra code olarak çalıştırabilirsin terminalden
+				
+
+				Eksik kurulduğunu düşündüğünüz şeyler varsa
+apt --fix-broken install
+
+
+				NetBean Ide Kurulumu
+net beans ide'den dosyayı indir.
+bash dosya_adi -> yükler(önce jdk yüklemiş olman lazım)
+
+			
+

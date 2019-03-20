@@ -1,0 +1,10 @@
+-) Terminali aç 
+-) pulseaudio -D -> yaz (uyarı çıkabilir dikkate alma)
+-) gedit .bashrc -> yaz, text belgesi açılacak
+-) açılan text belgesinin en son satıra bu iki kodu ekle ve kaydet çık. Restart yapınca sorun çözülecektir ^^... 
+   pulseaudio -D  
+   clear
+
+
+
+
