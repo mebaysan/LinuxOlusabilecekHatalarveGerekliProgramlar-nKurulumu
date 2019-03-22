@@ -1,0 +1,7 @@
+İstediğiniz java jdk'ları yükledikten sonra default olarak hangisi ile çalışmak istediğinizi ayarlamak için:
+
+jdk;
+terminale -> update-alternatives --config java
+
+javac;
+terminale -> update-alternatives --config javac
