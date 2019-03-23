@@ -1,0 +1,3 @@
+apt-get update yapınca hata alıyorsanız;
+- /etc/apt/sources.list.d/ dizinine gidin.
+hata aldığınız pakete dair dosyayı/dosyaları silin.
