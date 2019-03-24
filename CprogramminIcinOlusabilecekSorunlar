@@ -1,0 +1,7 @@
+Oluşabilecek derleme hatalarında bu paketlerin yüklenip yüklenilmediği kontrol edilmeli
+apt-get install libc6-dev
+apt-get install gcc
+apt-get install gpp
+
+
+gcc fileName.c -o fileName -> dosyayı gcc ile derler
