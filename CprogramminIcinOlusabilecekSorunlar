@@ -4,4 +4,4 @@ apt-get install gcc
 apt-get install gpp
 
 
-gcc fileName.c -o fileName -> dosyayı gcc ile derler
+gcc fileName.c -o fileName -lm -> dosyayı gcc ile derler
