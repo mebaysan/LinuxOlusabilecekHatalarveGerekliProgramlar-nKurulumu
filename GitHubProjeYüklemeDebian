@@ -1,0 +1,9 @@
+git config --global user.name "example" // kendi kullanıcı adınız terminale
+git config --global user.email "email@example.com" // kendi email terminale
+git init // dosyaların olduğu dizine terminalden gidin ve bu kod ile bir repo oluşturun
+git add . // bütün dosyaları oluşturduğunuz repoya ekleyin
+git commit -m "ilk commit" // açıklama satırı
+git remote add origin https://github.com/nafidurmus/deneme.git // new repo dedikten sonra size verilen link
+git push -u origin master // yine new repo kısmında size verilen link
+sayfaya refresh atın repolarınız yüklenmiş olursa işlem tamamdır
+Successfull! :)
