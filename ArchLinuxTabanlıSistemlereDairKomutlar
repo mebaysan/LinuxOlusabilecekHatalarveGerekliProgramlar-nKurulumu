@@ -1,0 +1,119 @@
+İndirme hızını optimize etme ve eşleştirme:
+pacman-optimize && sync
+---------------------------------------------------------------
+Sistem güncelleme:
+Pacman, sisteminizi tek bir komut ile günceller:
+pacman -Su
+---------------------------------------------------------------
+Güncellemeden önce her zaman depo veritabanını eşleştirmekte yarar var:
+pacman -Syu
+---------------------------------------------------------------
+Bazı paketleri engelleyerek yükseltme:
+IgnorePkg=package_name
+---------------------------------------------------------------
+Paket grubunu gözardı ederek güncelleme:
+IgnoreGroup=package_group
+Örn:
+IgnoreGroup=gnome
+IgnoreGroup=kde
+---------------------------------------------------------------
+KURULUM:
+1- Paket yükleme:
+pacman -S package_name
+---------------------------------------------------------------
+2- Grup olarak paket yükleme:
+pacman -S gnome
+pacman -S kde
+---------------------------------------------------------------
+Önemli:
+Eğer sisteminizde zaten kurulu bir paket yüklemek isterseniz yeniden yükleme yapılır. Bunu engellemek için ‘–needed’ seçeneği kullanılmalı.
+Bir paket yüklemeden önce sistem güncellenmelidir. Aksi takdirde bağımlılık sorunu çıkabilir.
+3- Bir paketi kurulum yapmaksızın indirmek:
+pacman -Sw package_name
+---------------------------------------------------------------
+4- Yerel bir paketi kurmak:
+pacman -U /package_path/package_name.pkg.tar.xz
+Bir yansı üzerindeki paketi yüklemek:
+pacman -U http://www.examplepackage/repo/examplepkg.tar.xz
+---------------------------------------------------------------
+5- Bütün paketleri yeniden yüklemek:
+pacman -S $(pacman -Qq | grep -v "$(pacman -Qmq)")
+6- Bir grup içerisinde olup yüklü paketler listesini almak:
+pacman -Sg gnome
+pacman -Sg kde
+---------------------------------------------------------------
+KALDIRMAK:
+1- Bir paketi kaldırmak:
+pacman -R package_name
+---------------------------------------------------------------
+2- Başka paketlerce kullanılmayan bağımlılıklarıyla birlikte bir paketi kaldırmak:
+pacman -Rs package_name
+---------------------------------------------------------------
+3- Bir paketi tüm bağımlılıklarıyla beraber kaldırmak:
+pacman -Rsc package_name
+Pacman , kurulu paketlerin ayar dosyalarını .pacsave şeklinde saklar. Bir paketi ütün ayar dosyalarıyla beraber kaldırmak için:
+pacman -Rn package_name
+---------------------------------------------------------------
+4- Gereksiz tüm paketleri bellekten boşaltmak:
+pacman -Sc $(pacman -Qdtq)
+---------------------------------------------------------------
+5- Paketlerin tutulduğu belleği tümüyle boşaltmak:
+pacman -Scc
+TEMİZLEME:
+
+1- Belleği temizleme:
+pacman -Sc
+---------------------------------------------------------------
+2- İhtiyaç duyulmayan paketleri temizleme:
+pacman -Rs $(pacman -Qtdq)
+---------------------------------------------------------------
+ARAMA:
+1- Açıklamaları ile bir paketi aramak:
+pacman -Ss package_name
+---------------------------------------------------------------
+2- Kurulu paketler içinde aramak:
+pacman -Qs package_name
+---------------------------------------------------------------
+3- Paket hakkında bilgi almak:
+pacman -Si package_name
+pacman -Qi package_name
+‘ii’ seçeneği ile yedeklenme ve değiştirilme zamanlarını da görebilirsiniz.
+pacman -Qii package_name
+---------------------------------------------------------------
+4- Kurulu paketlerin listesini almak:
+pacman -Ql 
+---------------------------------------------------------------
+5- To which package is this file belong to:
+pacman -Qo /file_path
+---------------------------------------------------------------
+6- Gerekli olmayan paketleri bağımlılıkları olmaksızın listelemek:
+pacman -Qdt
+---------------------------------------------------------------
+7- Paketin bağımlılıklarını listelemek:
+pactree package_name 
+---------------------------------------------------------------
+8- Sistemde kurulu tüm paketleri sürüm numaraları ile listelemek:
+sudo pacman -Q > laptop.pacman
+Parola girişin yapıldığında /home dizini altına laptop.pacman adında dosya oluşturur.
+---------------------------------------------------------------
+
+AUR (Arch User Repository):
+AUR kullanmak için 3 seçeneğimiz var:
+
+1- YAOURT:
+sudo pacman -S yaourt
+(Kolay kurulumlu Arch Linux türevlerinde ön yüklenmiş olarak gelir, bu komutun işletilmesine gerek yoktur).
+2- PACKER:
+Hem resmi depolardan hem AUR dan yükleme yapar.
+yaourt -S packer
+Packer sisteminize kurulduktan sonra kullanım komutu:
+packer -S package_name
+3- MERIC:
+Geliştiricisi ‘tarakbumba’ a dır ve Packer kullanımı gibidir.
+yaourt -S meric
+packer -S meric
+meric -S package_name
+---------------------------------------------------------------
+AUR PAKETLERİNİ GÜNCELLEME:
+Basitçe ‘packer’
+packer -syu
