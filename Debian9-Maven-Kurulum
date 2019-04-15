@@ -1,0 +1,18 @@
+ssh root@debian
+sudo apt update 
+sudo apt upgradecd /usr/local
+wget http://www-eu.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz 
+sudo tar xzf apache-maven-3.6.0-bin.tar.gz
+sudo ln -s apache-maven-3.6.0 apache-maven
+sudo leafpad /etc/profile.d/apache-maven.sh
+Sayfa Sonuna eklenecekler:
+export JAVA_HOME=/usr/lib/jvm/java-11-oracle
+export M2_HOME=/usr/local/apache-maven
+export MAVEN_HOME=/usr/local/apache-maven
+export PATH=${M2_HOME}/bin:${PATH}
+-----
+source /etc/profile.d/apache-maven.sh
+mvn -version
+-----
+İstersen paketler yer kaplamasın diye silebilirsin
+rm -f apache-maven-3.6.0-bin.tar.gz
