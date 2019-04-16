@@ -1,0 +1,3 @@
+/usr/share/java/  -> burada mysql connector jar vardır
+cp connector.jar /home/baysan  -> istediğimiz dizine kopyalıyoruz
+
