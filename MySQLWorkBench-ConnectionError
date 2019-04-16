@@ -1,0 +1,8 @@
+sudo mysql -u root -> mysql başlattık
+#Bu kodları sırasıyla yazıyoruz
+mysql> USE mysql;
+mysql> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+mysql> FLUSH PRIVILEGES;
+mysql> exit;
+
+service mysql restart  -> mysql servisini başlatır durdurmak için stop yazarız
