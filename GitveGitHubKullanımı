@@ -1,0 +1,8 @@
+"Gİt Clone" muhabbeti:
+  git clone githubreposununCLoneadresi(yeşil buton içerisindeki url) -> github reposunu dosyaya çıkartır
+  
+  "git status" muhabbeti:
+    git status  -> repo içerisinde değişime uğramış dosyaları tespit eder
+    git add .   -> repo içerisindeki dosyaları repo kaynağına ekler
+    git commit -m "yorum yazacaksınız"  -> ekleyeceğiniz dosyalara yorum ekler sağ tarafında açıklaması gözükür yorum yazabilirsiniz
+    git push origin master              -> yorumları da ekledikten sonra dosyaları github reposuna eklemenizi sağlar
