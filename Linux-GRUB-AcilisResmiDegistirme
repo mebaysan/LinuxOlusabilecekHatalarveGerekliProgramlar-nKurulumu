@@ -1,0 +1,3 @@
+
+cp deneme.jpg /boot/grub -> istediğin resmi jpg/png /boot/grub altına kopyala
+sudo grub-update        ->  grubu güncelle ve sistemi yeniden başlat sorun çözülecektir
