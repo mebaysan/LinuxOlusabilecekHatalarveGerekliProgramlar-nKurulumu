@@ -11,6 +11,9 @@ anaconda navigatoru indir
 indirdiğin dizine git
 dosyanın başına 'bash' koy çalıştır
 açmak için terminalde anaconda-navigator yaz
+terminalde yazan base yazısını değiştirmek için:
+conda config --set auto_activate_base False
+
 
 
 					XAMPP
