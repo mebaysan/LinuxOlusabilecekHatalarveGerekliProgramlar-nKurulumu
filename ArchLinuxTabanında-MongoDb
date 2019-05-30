@@ -1,0 +1,9 @@
+AUR paketlerine erişmek için pacman -S bir_adet_aur_paket_yöneticisi
+Ardından octopi>settings>aur paketlerini kullan'ı seç ve yüklediğin yöneticiyi seç
+AUR paketlerinden mongodb ve mongodbtools yükle
+
+
+
+
+systemctl start mongodb.service  -> servisi başlatır
+systemctl enable mongodb.service -> servisi bilgisayar açıldığında başlatır
